@@ -66,6 +66,9 @@ Similar to messages, each notification will have a type that will allow for gene
 For the new game implementation add TicTacToe. Located on the normal game page, there will be an option to pick a new TicTacToe game alongside the Nim game. TicTacToe will opeate in a similar fashion to Nim whereby users take turns. When a user creates a TicTacToe game they will also be able to add a pot to the game if they choose the game to be staked.<br>
 
 ### 6. Leaderboard Implementation
+
+This is technically an extension feature. In order to implement this we will use existing user data to create a new page on the app that displays a leaderboard based on whatever metric we decide (i.e. most CodeCoins, most questions answered, most games won...).<br>
+
 ### 7. Badge Shop
 
 The badge shop will be a seperate page visible to all users. In the badge shop, users can see a list view of all available badges. Once a user has unlocked a badge, that badge will be available for purchase (using CodeCoins) in the badge shop. The user will be able to see information about each badge including a description, the amount it costs (or if owned label OWNED), and a progress bar (too see how close the user is to unlocking the badge.<br>
