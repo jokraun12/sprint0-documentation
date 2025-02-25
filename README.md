@@ -4,9 +4,18 @@
 - Topics & Tasks
 ## Design Decisions:
 ### 1. CodeCoins
+
 ### 2. Best Answer Model
 
+Modify `Question` and `questionSchema` to include:
+- `bestAnswerId`: ObjectId of the best answer (optional)
 
+Add routes to controller:
+- `PATCH /questions/resolve/`: Set the best answer for a question
+  - Body: { qid: string, answerId: string }
+
+Add service methods:
+- `resolveQuestion(questionId, answerId)`: Set the best answer for a question, and pay out bounty.
 
 ### 3. Betting System
 ### 4. Notification System
