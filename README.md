@@ -14,28 +14,28 @@
 ### 6. Leaderboard Implementation
 ### 7. Badge Shop
 
-Badge Schema:
-_id: ObjectID
-type: "VERIFIED" | "OTHER"
-price: number
+Badge Schema:<br>
+_id: ObjectID<br>
+type: "VERIFIED" | "OTHER"<br>
+price: number<br>
 
-Badge Service:
-GET allows you to get badges given a user id
-PATCH for buying a badge 
+Badge Service:<br>
+GET allows you to get badges given a user id<br>
+PATCH for buying a badge<br> 
 - implement something similar on the backend to biography logic
 - excepr updateBadges gets called when purchasing a badhe
 - only show VERIFIED next to username, but in UserCard, show all badges 
 
-BadgeProgress schema:
-badge: Badge
-unlocked: bool
-progress: String 
+BadgeProgress schema:<br>
+badge: Badge<br>
+unlocked: bool<br>
+progress: String<br>
 
-Endpoints:
-/badges/getBadges/:username --> returns a list of badges 
+Endpoints:<br>
+/badges/getBadges/:username --> returns a list of badges<br>
 
-User Schema Updates:
-Need to add list of badges to user schema.
+User Schema Updates:<br>
+Need to add list of badges to user schema.<br>
 badges: `[Badges]`
 
 
