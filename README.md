@@ -35,6 +35,13 @@ Add service methods:
 - `resolveQuestion(questionId, answerId)`: Set the best answer for a question, and pay out bounty.
 
 ### 3. Betting System
+With the introduction of CodeCoins, there is now a bounty placed on each question and the user with the best answer obtains that bounty. 
+In addition to this, users can gain CodeCoins by joining staked-game rooms where they can create or join a game with a listed pot of CodeCoins. 
+- Winner receives the pot.
+- Loser loses the pot.
+
+`GameInstance = { state: GameState, ID: number, players: [string], type: GameType, pot: number }`
+
 ### 4. Notification System
 
 #### Introduction:
