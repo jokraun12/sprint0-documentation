@@ -3,7 +3,9 @@
 - What we're actually implementing
 - Topics & Tasks
 ## Design Decisions:
+
 ### 1. CodeCoins
+
 #### Introduction:
 Users now have the ability to earn rewards for engaging with FakeStackOverflow!  These rewards come in the form of our proprietary currency - CodeCoins.  Each user will have a wallet that contains the amount of CodeCoins they currently hold.  Users can acquire CodeCoins in the following ways:
 1. Upon signup, users will be granted a "starter pack" of 10 CodeCoins.
@@ -34,6 +36,24 @@ Add service methods:
 
 ### 3. Betting System
 ### 4. Notification System
+
+#### Introduction:
+We have decided to implement a design choice that users should have some method of being notified about certain server updates pertaining to them.  This could include but is not limited to:
+- An answer has been posted on their question.
+- Their answer has been endorsed as the correct answer.
+- The amount of CodeCoins in their wallet has changed in some manner.
+#### Design Choices:
+Located on the user's homepage, a notification box at the top right will be visible for a user to open and view a list of notifications.  Every time something happens that pertains to that user, the socket will emit an event that will trigger a certain notification to appear in that tab.<br>
+
+A user will have the ability to mark a notification as "Read" in which case the notification will disappear from the notification card, and the user will no longer be able to see the notification.<br>
+
+In terms of new implementation, similar to the `Message` type, the database will now be udpated with a `NotificationSchema` these notifications will operate very similarly to the messages, except notifications can be thought of as "messages between server and the user."<br>
+
+Similar to messages, each notification will have a type that will allow for generalized formats for different notification types.
+#### API Endpoints:
+`GET /getNotifications`
+
+
 ### 5. Introduction of New Game
 ### 6. Leaderboard Implementation
 ### 7. Badge Shop
